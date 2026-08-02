@@ -56,8 +56,12 @@
     display:flex;align-items:center;justify-content:space-between;
     padding:18px 32px;max-width:1180px;margin:0 auto;
   }
-  .logo{font-family:var(--mono);font-weight:700;font-size:18px;letter-spacing:-0.5px;}
+  .logo{font-family:var(--mono);font-weight:700;font-size:18px;letter-spacing:-0.5px;display:flex;align-items:center;gap:10px;}
   .logo .dot{color:var(--accent);}
+  .nav-avatar{
+    width:34px;height:34px;border-radius:50%;object-fit:cover;
+    border:2px solid var(--accent);flex-shrink:0;
+  }
   .nav-links{display:flex;align-items:center;gap:36px;list-style:none;}
   .nav-links a{
     font-size:14px;color:var(--text-dim);font-weight:500;
@@ -137,7 +141,6 @@
   .section-head h2{font-family:var(--mono);font-size:clamp(24px,3vw,34px);font-weight:600;}
 
   /* ===== About ===== */
-  <img src="profile.jpg" alt="Muhammad Tahseen" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);margin-bottom:24px;">
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
   .about-grid p{color:var(--text-dim);line-height:1.85;font-size:15.5px;margin-bottom:16px;}
   .edu-item{
@@ -250,7 +253,7 @@
 
 <header>
   <nav>
-    <div class="logo">M.Tahseen<span class="dot">.</span></div>
+    <div class="logo"><img src="profile.jpg" alt="Muhammad Tahseen" class="nav-avatar">M.Tahseen<span class="dot">.</span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
